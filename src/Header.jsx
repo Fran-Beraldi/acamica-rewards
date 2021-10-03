@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import UserAccount from "./UserAccount";
 import UserPoints from "./UserPoints";
-//import ImgHeader from "../public/recursos/aerolab-logo.svg";
-//import ImgCoin from "../public/recursos/coin.svg";
-//import ImgArrow from "../public/recursos/down-arrow.png";
+
 export default function Header(props) {
   const [historial, setHistorial] = useState(false);
   const manejarClick = () => {

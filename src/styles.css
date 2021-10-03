@@ -167,11 +167,30 @@
   background-color: #ededed;
   outline: none;
   border: none;
-  font-size: 24px;
+  font-size: 18px;
   color: #a3a3a3;
   margin-right: 20px;
+  cursor: pointer;
 }
 
+.Filter button.active {
+  background-color: #1ed1f2;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.Filter-select {
+  height: 48px;
+  width: 193px;
+  border-radius: 20.5px;
+  background-color: #ededed;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: #a3a3a3;
+  margin-right: 20px;
+  cursor: pointer;
+}
 .Filter-arrows img {
   padding: 10px;
 }
@@ -179,20 +198,29 @@
 .Product {
   width: 25%;
   height: 276px;
-  display: fex;
   background-color: #ffffff;
   margin: 20px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.Product img {
-  border-bottom: 1px solid #d9d9d9;
+  position: relative;
 }
 
 .product-description {
+  display: flex;
+  flex-direction: column;
   width: 228px;
-  border-top: 1px solid #d9d9d9;
   text-align: left;
+}
+
+.product-img {
+  border-bottom: 1px solid #d9d9d9;
+  width: 252px;
+  height: 182px;
+}
+
+.product-img-blue{
+  position:absolute;
+  top: 15px;
+  left: 236px;
 }
 
 .product-category {

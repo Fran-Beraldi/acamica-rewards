@@ -1,5 +1,4 @@
 import React from "react";
-//import ImgCoin from "../public/recursos/coin.svg";
 
 export default function UserPoints(props) {
   return (

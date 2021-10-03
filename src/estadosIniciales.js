@@ -1,6 +1,7 @@
 export const estadosIniciales = {
-    Recent: "Todos los productos",
+    Category: "Todos",
     Price: "Todos los precios",
+    Sort: "lowest",
     User: {
       name: "",
       redeemHistory: [],

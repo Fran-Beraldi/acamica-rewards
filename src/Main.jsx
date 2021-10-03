@@ -1,5 +1,5 @@
 import React from "react";
-//import ImgMain from "../public/recursos/header-x1.png";
+
 export default function Main() {
   return (
     <div className="Main">

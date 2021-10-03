@@ -11,6 +11,9 @@ export default function App() {
   const [precioActual, actualizarPrecio] = useState(estadosIniciales.Price);
   const [productos, actualizarProductos] = useState([]);
   const [user, actualizarUser] = useState(estadosIniciales.User);
+  const [categoriaActual, actualizarCategoria] = useState (estadosIniciales.Category);
+  const [ordenActual, actualizarOrden] = useState (estadosIniciales.Category);
+  const [paginaActual, actualizarPagina] = useState (1);
 
   useEffect(() => {
     if (productos.length > 0) {
@@ -82,12 +85,46 @@ export default function App() {
         alert("actualizado!");
       });
   };
+
+  const crearListaProductos = () => {
+    const nuevaLista = productos
+      .filter((producto) => {
+        if (categoriaActual === estadosIniciales.Category) {
+          return true;
+        } else {
+           return producto.category === categoriaActual
+        }
+      })
+      .sort((a, b) => {
+        if (ordenActual === 'lowest'){
+          return a.cost - b.cost;
+        } else {
+          return b.cost - a.cost;
+        }
+      });
+
+      return nuevaLista;
+  };
+
+  let listaFiltradaProductos = crearListaProductos();
+  
   return (
     <div className="App">
-      <Header user={user} sumarPuntos={sumarPuntos} />
+      <Header user={user} sumarPuntos={sumarPuntos}
+              />
       <Main />
-      <Filter precioActual={precioActual} actualizarPrecio={actualizarPrecio} />
-      <List productos={productos} user={user} />
+      <Filter precioActual={precioActual}
+              actualizarPrecio={actualizarPrecio}
+              categoriaActual={categoriaActual}
+              actualizarCategoria={actualizarCategoria}
+              ordenActual={ordenActual}
+              actualizarOrden={actualizarOrden}
+              paginaActual={paginaActual}
+              actualizarPagina={actualizarPagina}
+              totalProductos={listaFiltradaProductos.length}
+              />
+      <List   productos={listaFiltradaProductos} user={user}
+              />
       <Footer />
     </div>
   );

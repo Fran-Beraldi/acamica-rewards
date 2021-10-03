@@ -1,6 +1,4 @@
 import React from "react";
-//import ArrowLeft from "../public/recursos/arrow-left.svg";
-//import ArrowRight from "../public/recursos/arrow-right.svg";
 
 export default function Footer() {
   return (
