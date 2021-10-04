@@ -146,6 +146,7 @@
   align-items: center;
   padding-right: 20px;
   color: #616161;
+  font-size: 24px;
 }
 
 .Filter-btn {
@@ -191,15 +192,21 @@
   margin-right: 20px;
   cursor: pointer;
 }
+
+.Filter-arrows{
+  display: flex;
+}
+
 .Filter-arrows img {
   padding: 10px;
+  cursor: pointer;
 }
 
 .Product {
-  width: 25%;
+  width: 23%;
   height: 276px;
   background-color: #ffffff;
-  margin: 20px;
+  margin: 1%;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
 }
@@ -220,22 +227,26 @@
 .product-img-blue{
   position:absolute;
   top: 15px;
-  left: 236px;
+  left: 220px;
 }
 
 .product-category {
+  padding-left: 10px;
   font-size: 16px;
   color: #a3a3a3;
 }
 
 .product-name {
+  padding-left: 10px;
   font-size: 18px;
   color: #616161;
 }
 .List {
+  padding: 40px 0;
   width: 1176px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  margin: 0 auto;
 }
 

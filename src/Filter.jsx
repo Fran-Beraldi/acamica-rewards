@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import { estadosIniciales } from "./estadosIniciales";
-import {ListOfProducts} from "./ListOfProducts";
+//import {ListOfProducts} from "./ListOfProducts";
 
 export default function Filter(props) {
-  const manejarCambioPrecio = (e) => {
-    props.actualizarPrecio(e.target.value);
-  };
+
   const manejarCambioCategoria = (e) => {
     props.actualizarCategoria(e.target.value);
   };
-  const productosPorPagina = 16;
+  
+  
   return (
     <div className="Filter">
       <div className="Filter-text">
-        <div className="Filter-number">{(props.totalProductos <= productosPorPagina) ? props.totalProductos : productosPorPagina} of {props.totalProductos} products</div>
+        <div className="Filter-number">{(props.totalProductos <= props.productosPorPagina) ? props.totalProductos : props.productosPorPagina} of {props.totalProductos} products</div>
         <div className="Filter-btn">
           <div>Sort by:</div>
           <select className="Filter-select" value={props.categoriaActual} onChange ={manejarCambioCategoria}>
@@ -35,8 +34,10 @@ export default function Filter(props) {
         </div>
       </div>
       <div className="Filter-arrows">
-        <img src="/recursos/arrow-left.svg" alt="flecha izquierda" />
-        <img src="/recursos/arrow-right.svg" alt="flecha derecha" />
+        {props.paginaActual > 1 ?
+        (<div onClick={props.manejarClickPaginaAnterior}><img src="/recursos/arrow-left.svg" alt="flecha izquierda" /></div>) : null}
+        {props.paginaActual < props.totalPaginas ?
+        (<div onClick={props.manejarClickPaginaSiguiente}><img src="/recursos/arrow-right.svg" alt="flecha derecha" /></div>) : null}
       </div>
     </div>
   );

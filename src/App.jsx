@@ -8,6 +8,7 @@ import { estadosIniciales } from "./estadosIniciales";
 import "./styles.css";
 
 export default function App() {
+  const productosPorPagina = 16;
   const [precioActual, actualizarPrecio] = useState(estadosIniciales.Price);
   const [productos, actualizarProductos] = useState([]);
   const [user, actualizarUser] = useState(estadosIniciales.User);
@@ -107,13 +108,23 @@ export default function App() {
   };
 
   let listaFiltradaProductos = crearListaProductos();
-  
+  const manejarClickPaginaAnterior = (e) => {
+    actualizarPagina(paginaActual - 1);
+  }
+  const manejarClickPaginaSiguiente = (e) => {
+    actualizarPagina(paginaActual + 1);
+  }
+  const calcularTotalPaginas = ()=>{
+    return Math.ceil(listaFiltradaProductos.length / productosPorPagina);
+  }
+  let totalPaginas = calcularTotalPaginas();
   return (
     <div className="App">
       <Header user={user} sumarPuntos={sumarPuntos}
               />
       <Main />
-      <Filter precioActual={precioActual}
+      <Filter productosPorPagina={productosPorPagina}
+              precioActual={precioActual}
               actualizarPrecio={actualizarPrecio}
               categoriaActual={categoriaActual}
               actualizarCategoria={actualizarCategoria}
@@ -122,10 +133,20 @@ export default function App() {
               paginaActual={paginaActual}
               actualizarPagina={actualizarPagina}
               totalProductos={listaFiltradaProductos.length}
+              manejarClickPaginaAnterior={manejarClickPaginaAnterior}
+              manejarClickPaginaSiguiente={manejarClickPaginaSiguiente}
+              totalPaginas={totalPaginas}
               />
-      <List   productos={listaFiltradaProductos} user={user}
+      <List   productosPorPagina={productosPorPagina}
+              productos={listaFiltradaProductos}
+              user={user}
+              paginaActual={paginaActual}
               />
-      <Footer />
+      <Footer paginaActual={paginaActual}
+              manejarClickPaginaAnterior={manejarClickPaginaAnterior}
+              manejarClickPaginaSiguiente={manejarClickPaginaSiguiente}
+              totalPaginas={totalPaginas}
+              />
     </div>
   );
 }
