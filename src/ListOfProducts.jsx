@@ -20,6 +20,7 @@ export default function ListOfProducts(props) {
             photo={producto.img.url}
             category={producto.category}
             name={producto.name}
+            userPoints={props.user.points}
             points={producto.cost}
             active={producto.cost <= props.user.points ? true : false}
           />

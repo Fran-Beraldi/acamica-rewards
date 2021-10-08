@@ -241,6 +241,70 @@
   font-size: 18px;
   color: #616161;
 }
+
+.product-buy{
+  height: 42px;
+  width: auto;
+  background-color: #a3a3a3c9;
+  border-radius: 36px;
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  padding: 15px;
+  position:absolute;
+  top: 15px;
+  left: 120px;
+}
+
+.product-modal{
+  height: 100%;
+  width: 100%;
+  background-color: #0ad2fac7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-modal-img {
+  position:absolute;
+  top: 15px;
+  left: 220px;
+}
+
+.product-modal-points {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-modal-points h1 {
+  color: white;
+  font-size: 36px;
+}
+
+.Coin-modal-img {
+  margin-left: 7px;
+  width: 35px;
+}
+
+.product-modal-btn {
+  height: 48px;
+  width: 180px;
+  border-radius: 20.5px;
+  background-color: white;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
 .List {
   padding: 40px 0;
   width: 1176px;
@@ -250,3 +314,48 @@
   margin: 0 auto;
 }
 
+.modal{
+  height: 100%;
+  width: 100%;
+  background-color: #4d5656ad;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.message {
+   width: 450px;
+   background-color: white;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 30px;
+}
+
+.message button {
+  height: 48px;
+  width: 163px;
+  border-radius: 20.5px;
+  background-color: #1ed1f2;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: white;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.message p {
+  font-size: 24px;
+}
+
+.icon-message {
+  width: 100px;
+  margin-bottom: 15px;
+}
