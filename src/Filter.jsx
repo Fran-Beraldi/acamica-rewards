@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { estadosIniciales } from "./estadosIniciales";
-//import {ListOfProducts} from "./ListOfProducts";
 
 export default function Filter(props) {
 

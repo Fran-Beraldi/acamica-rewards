@@ -4,7 +4,6 @@ import Filter from "./Filter";
 import Main from "./Main";
 import List from "./ListOfProducts";
 import Footer from "./Footer";
-import Congrats from "./Congrats";
 import { estadosIniciales } from "./estadosIniciales";
 import "./styles.css";
 
@@ -38,11 +37,7 @@ export default function App() {
       });
   }, [productos]);
 
-  useEffect(() => {
-    if (user.name) {
-      return false;
-    }
-
+  const cargarUsuario = () => {
     let peticion = fetch("https://coding-challenge-api.aerolab.co/user/me", {
       method: "GET",
       headers: {
@@ -56,9 +51,16 @@ export default function App() {
       })
       .then((response) => {
         console.log(response);
-        response.points = 2100;
         actualizarUser(response);
       });
+  }
+  useEffect(() => {
+    if (user.name) {
+      return false;
+    }
+
+    cargarUsuario();
+
   }, [user]);
 
   const sumarPuntos = (puntos) => {
@@ -143,6 +145,7 @@ export default function App() {
               productos={listaFiltradaProductos}
               user={user}
               paginaActual={paginaActual}
+              cargarUsuario={cargarUsuario}
               />
       <Footer paginaActual={paginaActual}
               manejarClickPaginaAnterior={manejarClickPaginaAnterior}

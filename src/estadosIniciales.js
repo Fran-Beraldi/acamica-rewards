@@ -1,6 +1,6 @@
 export const estadosIniciales = {
-    Category: "Todos",
-    Price: "Todos los precios",
+    Category: "All products",
+    Price: "All prices",
     Sort: "lowest",
     User: {
       name: "",
