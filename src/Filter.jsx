@@ -34,9 +34,9 @@ export default function Filter(props) {
       </div>
       <div className="Filter-arrows">
         {props.paginaActual > 1 ?
-        (<div onClick={props.manejarClickPaginaAnterior}><img src="/recursos/arrow-left.svg" alt="flecha izquierda" /></div>) : null}
+        (<div onClick={props.manejarClickPaginaAnterior}><img src="./recursos/arrow-left.svg" alt="flecha izquierda" /></div>) : null}
         {props.paginaActual < props.totalPaginas ?
-        (<div onClick={props.manejarClickPaginaSiguiente}><img src="/recursos/arrow-right.svg" alt="flecha derecha" /></div>) : null}
+        (<div onClick={props.manejarClickPaginaSiguiente}><img src="./recursos/arrow-right.svg" alt="flecha derecha" /></div>) : null}
       </div>
     </div>
   );

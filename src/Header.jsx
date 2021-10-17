@@ -15,7 +15,7 @@ export default function Header(props) {
   };
   return (
     <div className="Header">
-      <img className="logo-img" src="/recursos/aerolab-logo.svg" alt="imagen logo" />
+      <img className="logo-img" src="./recursos/aerolab-logo.svg" alt="imagen logo" />
       <div className="User">
         <div className="btn-header ">
           {historial === true ? <UserAccount user={props.user} /> : null}
@@ -23,7 +23,7 @@ export default function Header(props) {
             {props.user.name}{" "}
             <img
               className="Arrow-img"
-              src="/recursos/down-arrow.png"
+              src="./recursos/down-arrow.png"
               alt="flecha hacia abajo"
             />{" "}
           </div>
@@ -34,10 +34,10 @@ export default function Header(props) {
           ) : null}
           <div onClick={manejarPoints}>
             {props.user.points}{" "}
-            <img className="Coin-img" src='/recursos/coin.svg' alt="imagen moneda" />
+            <img className="Coin-img" src='./recursos/coin.svg' alt="imagen moneda" />
             <img
               className="Arrow-img"
-              src="/recursos/down-arrow.png"
+              src="./recursos/down-arrow.png"
               alt="flecha hacia abajo"
             />
           </div>

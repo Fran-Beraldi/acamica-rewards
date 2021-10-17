@@ -54,13 +54,13 @@ export default function Product(props) {
   return (
     <div onMouseOver={manejarMouseOver} onMouseLeave={manejarMouseLive} className="Product">
       {modalOpen === true ? (<div className= "product-modal">
-        <img className= "product-modal-img"src="/recursos/buy-white.svg" alt="buy icon" />
+        <img className= "product-modal-img"src="./recursos/buy-white.svg" alt="buy icon" />
         <div className="product-modal-description">
           <div className= "product-modal-points">
             <h1>{props.points}</h1>
-            <img className="Coin-modal-img" src='/recursos/coin.svg' alt="imagen moneda" />
+            <img className="Coin-modal-img" src='./recursos/coin.svg' alt="imagen moneda" />
           </div>
-          <button onClick={manejarClickCompra} className= "product-modal-btn"> { (loading === true) ? (<div className="loading"><img width="25px" src="/recursos/Spinner-2.gif" alt="loading" /></div>) : "Redeem now"  }</button>
+          <button onClick={manejarClickCompra} className= "product-modal-btn"> { (loading === true) ? (<div className="loading"><img width="25px" src="./recursos/Spinner-2.gif" alt="loading" /></div>) : "Redeem now"  }</button>
         </div>
       </div>) : null}
       <div className="product-description">
@@ -72,11 +72,11 @@ export default function Product(props) {
         {props.active ? (
           <div>
             {" "}
-            <img className="product-img-blue" src="/recursos/buy-blue.svg" alt="buy icon" />{" "}
+            <img className="product-img-blue" src="./recursos/buy-blue.svg" alt="buy icon" />{" "}
           </div>
         ) : (
           <div className="product-buy">you need { props.points - props.userPoints }
-            <img className="Coin-img" src='/recursos/coin.svg' alt="imagen moneda" />
+            <img className="Coin-img" src='./recursos/coin.svg' alt="imagen moneda" />
           </div>
         )}
         {congratsOpen === true ? <Congrats actualizarCongratsOpen = {actualizarCongratsOpen}/> : null}
