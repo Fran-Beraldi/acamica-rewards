@@ -50,7 +50,7 @@ export default function App() {
         return res.json();
       })
       .then((response) => {
-        console.log(response);
+        response.redeemHistory.reverse();
         actualizarUser(response);
       });
   }

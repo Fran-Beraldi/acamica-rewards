@@ -5,8 +5,8 @@ export default function UserAccount(props) {
     <div className="Account">
       <div className="account-title">Historial</div>
       <ul>
-        {props.user.redeemHistory.reverse().slice(0, 2).map((item) => {
-          return <p>{item.name}</p>;
+        {props.user.redeemHistory.slice(0, 30).map((item) => {
+          return <p key={item._id}>{item.name}</p>;
         })}
       </ul>
     </div>
