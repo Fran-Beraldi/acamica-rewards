@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/acamica-rewards/static/css/main.f566f859.chunk.css",
+    "main.js": "/acamica-rewards/static/js/main.b7abc6ac.chunk.js",
+    "main.js.map": "/acamica-rewards/static/js/main.b7abc6ac.chunk.js.map",
+    "runtime-main.js": "/acamica-rewards/static/js/runtime-main.a52e1f57.js",
+    "runtime-main.js.map": "/acamica-rewards/static/js/runtime-main.a52e1f57.js.map",
+    "static/js/2.e38ab3a9.chunk.js": "/acamica-rewards/static/js/2.e38ab3a9.chunk.js",
+    "static/js/2.e38ab3a9.chunk.js.map": "/acamica-rewards/static/js/2.e38ab3a9.chunk.js.map",
+    "static/js/3.1d3a9d69.chunk.js": "/acamica-rewards/static/js/3.1d3a9d69.chunk.js",
+    "static/js/3.1d3a9d69.chunk.js.map": "/acamica-rewards/static/js/3.1d3a9d69.chunk.js.map",
+    "index.html": "/acamica-rewards/index.html",
+    "static/css/main.f566f859.chunk.css.map": "/acamica-rewards/static/css/main.f566f859.chunk.css.map",
+    "static/js/2.e38ab3a9.chunk.js.LICENSE.txt": "/acamica-rewards/static/js/2.e38ab3a9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a52e1f57.js",
+    "static/js/2.e38ab3a9.chunk.js",
+    "static/css/main.f566f859.chunk.css",
+    "static/js/main.b7abc6ac.chunk.js"
+  ]
+}
